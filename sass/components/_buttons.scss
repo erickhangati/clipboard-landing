@@ -1,0 +1,36 @@
+.btn {
+  border: 0;
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: none;
+  color: white;
+  padding: 1.4rem 2.8rem;
+  border-radius: 10rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  @include respond(tab-land) {
+    padding: 1.8rem 2.4rem;
+  }
+
+  &-primary {
+    background-color: var(--strong-cyan);
+    border-bottom: 4px solid hsl(171, 67%, 36%);
+
+    &:hover {
+      background-color: var(--strong-cyan-light);
+      border-bottom: 4px solid hsl(171, 62%, 59%);
+    }
+  }
+
+  &-secondary {
+    background-color: var(--light-blue);
+    border-bottom: 4px solid hsl(233, 47%, 47%);
+
+    &:hover {
+      background-color: var(--light-blue-light);
+      border-bottom: 4px solid hsl(233, 64%, 71%);
+    }
+  }
+}

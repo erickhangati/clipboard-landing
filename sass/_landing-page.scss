@@ -1,0 +1,295 @@
+.logo {
+  width: 12.5rem;
+  height: 12.5rem;
+
+  background-image: url("/images/logo.svg");
+  background-size: cover;
+
+  @include respond(tab-land) {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  @include respond(tab-pot) {
+    width: 11rem;
+    height: 11rem;
+    margin-top: 10rem;
+  }
+
+  @include respond(phone-lg) {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.hero {
+  height: 100vh;
+  padding: 0 20vw;
+  text-align: center;
+
+  background-image: url("/images/bg-header-desktop.png");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+
+  @include respond(tab-land) {
+    padding: 0 14vw;
+    gap: 4rem;
+  }
+
+  @include respond(tab-pot) {
+    height: auto;
+    padding: 0 12vw;
+    margin-bottom: 8rem;
+  }
+
+  @include respond(phone-lg) {
+    padding: 0 10vw;
+    background-image: url("/images/bg-header-mobile.png");
+  }
+
+  @include respond(phone-sm) {
+    padding: 0 8vw;
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    @include respond(tab-land) {
+      gap: 2rem;
+    }
+  }
+
+  &_call-to-action {
+    display: flex;
+    gap: 2rem;
+
+    @include respond(phone-sm) {
+      width: 100%;
+
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+}
+
+.features {
+  padding: 4rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8rem;
+  row-gap: 10rem;
+
+  @include respond(tab-land) {
+    padding: 8rem 0;
+  }
+
+  @include respond(tab-pot) {
+    padding: 4rem 0;
+  }
+
+  @include respond(phone-lg) {
+    padding: 4rem 6rem;
+
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  &-header {
+    padding: 0 26vw;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    grid-column: 1 / span 2;
+
+    @include respond(tab-land) {
+      padding: 0 20vw;
+    }
+
+    @include respond(phone-lg) {
+      padding: 0;
+
+      grid-column: 1;
+    }
+  }
+
+  &_image {
+    width: 100%;
+    transform: translateX(-3rem) scale(1.08);
+
+    align-self: center;
+
+    @include respond(phone-lg) {
+      transform: none;
+
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+
+  &-list {
+    padding-right: 27rem;
+    padding-left: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+
+    @include respond(tab-land) {
+      padding-right: 16rem;
+      padding-left: 0;
+
+      gap: 4rem;
+    }
+
+    @include respond(tab-pot) {
+      padding-right: 8rem;
+
+      gap: 3rem;
+    }
+
+    @include respond(phone-lg) {
+      padding: 0;
+
+      grid-column: 1;
+      grid-row: 3;
+    }
+  }
+
+  &-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.device-preview {
+  width: 60vw;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10rem 0 0 0;
+
+  @include respond(tab-land) {
+    width: 80vw;
+  }
+
+  @include respond(phone-sm) {
+    padding: 4rem 0;
+  }
+
+  &__description {
+    width: 74%;
+    margin: 0 auto;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+.tools {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 8rem 0 4rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @include respond(phone-sm) {
+    padding: 4rem 0;
+    grid-template-columns: 1fr;
+  }
+
+  &-header {
+    text-align: center;
+    width: 74%;
+    margin: 0 auto;
+    grid-column: 1 / -1;
+  }
+
+  &-features {
+    text-align: center;
+
+    @include respond(phone-sm) {
+      margin-bottom: 4rem;
+    }
+
+    &__icon {
+      width: 3.4rem;
+      height: 3.4rem;
+    }
+  }
+}
+
+.logos {
+  width: 80%;
+  margin: 0 auto;
+  padding: 8rem 0;
+
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+
+  @include respond(phone-sm) {
+    padding: 4rem 0;
+
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__image {
+    max-width: 10rem;
+
+    @include respond(phone-sm) {
+      max-width: 20rem;
+      margin: 0 auto 6rem auto;
+    }
+  }
+}
+
+.section-cta {
+  width: 80%;
+  margin: 0 auto;
+  padding: 8rem 0;
+
+  @include respond(phone-sm) {
+    padding: 4rem 0 8rem 0;
+  }
+
+  .cta {
+    &-text {
+      text-align: center;
+      width: 60%;
+      margin: 0 auto;
+
+      @include respond(phone-sm) {
+        width: 80%;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+
+      @include respond(phone-sm) {
+        flex-direction: column;
+      }
+    }
+  }
+}
